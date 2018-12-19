@@ -1,0 +1,18 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion 28
+}
+ext {
+    isLibrary = true
+    pomPackaging = "aar"
+    pomArtifactId = "zxing"
+    pomName = "ZXing Scanner View"
+    pomDescription = 'An android library project which contains the zxing barcode scanner view'
+}
+
+dependencies {
+
+//    implementation 'me.dm7.barcodescanner:core:1.9.8'
+    implementation project(':core')
+    implementation files('libs/core.jar')
+}
